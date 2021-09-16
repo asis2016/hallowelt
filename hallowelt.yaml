@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hallowelt-v1
+  labels:
+    creation_method: manual
+    env: debug
+    author: amaharjan
+spec:
+  containers:
+  - name: kubia
+    image: lionasis/hallowelt
+    ports:
+    - containerPort: 8080
+      protocol: TCP
