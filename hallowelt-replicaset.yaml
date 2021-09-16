@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: hallowet
+        app: hallowelt
     spec:
       containers:
       - name: hallowet
