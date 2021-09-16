@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: hallowelt
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hallowelt
+  template:
+    metadata:
+      labels:
+        app: hallowet
+    spec:
+      containers:
+      - name: hallowet
+        image: lionasis/hallowet
