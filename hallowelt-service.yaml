@@ -4,7 +4,8 @@ metadata:
   name: hallowelt
 spec:
   ports:
-  - port: 80
-    targetPort: 8080
+  - name: http
+    port: 80
+    targetPort: http  #this comes from pod
   selector:
     app: hallowelt
