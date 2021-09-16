@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hallowelt-svc
+  name: hallowelt
 spec:
   ports:
   - port: 80
