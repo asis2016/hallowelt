@@ -6,6 +6,7 @@ metadata:
     creation_method: manual
     env: debug
     author: amaharjan
+    app: hallowelt
 spec:
   containers:
   - name: kubia
