@@ -9,7 +9,7 @@ metadata:
     app: hallowelt
 spec:
   containers:
-  - name: kubia
+  - name: hallowelt
     image: lionasis/hallowelt
     ports:
     - containerPort: 8080
