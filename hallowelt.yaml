@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hallowelt-v1
+  name: hallowelt
   labels:
     creation_method: manual
     env: debug
