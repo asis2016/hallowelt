@@ -1,0 +1,13 @@
+apiVersion: extensions/v1
+kind: Ingress
+metadata:
+  name: hallowelt
+spec:
+  rules:
+  - host: hallowelt.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: hallowelt-nodeport
+          servicePort: 80
