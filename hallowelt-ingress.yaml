@@ -1,13 +1,15 @@
-apiVersion: extensions/v1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hallowelt
 spec:
   rules:
-  - host: hallowelt.example.com
+  - host: hallowelt.info
     http:
       paths:
       - path: /
         backend:
-          serviceName: hallowelt-nodeport
-          servicePort: 80
+          service:
+            name: hallowelt-nodeport
+            port:
+              number: 80
