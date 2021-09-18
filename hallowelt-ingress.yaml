@@ -4,7 +4,7 @@ metadata:
   name: hallowelt
 spec:
   rules:
-  - host: hallowelt.info
+  - host: hallowelt.priv
     http:
       paths:
       - path: /
