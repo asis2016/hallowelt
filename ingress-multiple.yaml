@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-world-ingress
+spec:
+  rules:
+  - host: hallowelt.priv
+    http:
+      paths:
+      - path: /de                               # All request (i.e. /) will be sent to port 80 of service > hallowelt-nodeport
+        pathType: Prefix                        # 
+        backend:                                # 
+          service:                              # 
+            name: hallowelt-nodeport            # 
+            port:                               # 
+              number: 80                        #
+       - path: /es
+         pathType: Prefix
+         backend:
+           service:
+             name: holamundo-nodeport
+             port:
+               number: 80
