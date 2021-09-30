@@ -7,10 +7,10 @@ spec:
   - host: hallowelt.priv
     http:
       paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: hallowelt-nodeport
-            port:
-              number: 80
+      - path: /                                 # All request (i.e. /) 
+        pathType: Prefix                        # will be 
+        backend:                                # sent to
+          service:                              # port 80
+            name: hallowelt-nodeport            # of the
+            port:                               # service > hallowelt-nodeport
+              number: 80                        #
