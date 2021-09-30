@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hallowelt-rc
+spec:
+  replicas: 2
+  selector:                                 # select determines     
+      app: brave-new-world  #pod            # what pods the RC will operate
+  template:                                 # |  
+    metadata:                               # | 
+      name: brave-new-world                 # |
+      labels:                               # |
+        app: brave-new-world                # | template
+    spec:                                   # | determines
+      containers:                           # | 
+      - name: hallowelt                     # | creation
+        image: lionasis/hallowelt           # | of a 
+        ports:                              # | new 
+        - name: http                        # | pod
+          containerPort: 8080               # |
+          protocol: TCP                     # |
