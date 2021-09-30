@@ -14,10 +14,10 @@ spec:
             name: hallowelt-nodeport            # 
             port:                               # 
               number: 80                        #
-       - path: /es
-         pathType: Prefix
-         backend:
-           service:
-             name: holamundo-nodeport
-             port:
-               number: 80
+      - path: /es
+        pathType: Prefix
+        backend:
+          service:
+            name: holamundo-nodeport
+            port:
+              number: 80  
