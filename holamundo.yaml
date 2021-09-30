@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: holamundo
+  labels:
+    author: amaharjan
+    app: holamundo
+spec:
+  containers:
+  - name: holamundo
+    image: lionasis/holamundo
+    ports:
+    - name: holamundo-http
+      containerPort: 8080
+      protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: holamundo-nodeport
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 8080
+    nodePort: 33333
+  selector:
+    app: holamundo
+
