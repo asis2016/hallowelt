@@ -15,3 +15,7 @@ spec:
       containers:
       - name: hallowelt
         image: lionasis/hallowelt
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
