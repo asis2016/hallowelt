@@ -23,7 +23,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
-    nodePort: 33333
+    nodePort: 31111
   selector:
     app: holamundo
 
