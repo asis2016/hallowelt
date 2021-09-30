@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-world-ingress
+spec:
+  rules:
+  - host: orwell.priv
+    http:
+      paths:                      
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: orwell-nodeport
+            port:
+              number: 80 
+  - host: huxley.priv
+    http:
+      paths:                    
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: huxley-nodeport
+            port:
+              number: 80  
